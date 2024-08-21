@@ -1,0 +1,288 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('img/estrela1.webp');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+}
+
+
+header {
+    background-color: #2f2c8c;
+    padding: 30px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #7b9df1;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    color: #2a2929;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Estilos da Seção Home, Contato e Sobre */
+#home, #contato, #sobre {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1185px; /* Ajusta a largura máxima */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+}
+
+/* Aumentar Tamanho da Fonte para Home, Contato e Sobre */
+#home h1, #contato h1, #sobre h1 {
+    font-size: 3em; /* Aumenta o tamanho do título */
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#home p, #contato p, #sobre p {
+    font-size: 1.3em; /* Aumenta o tamanho do texto do parágrafo */
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+
+/* Estilos da Seção do Livro */
+.book-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 15px; /* Ajuste o espaço entre a descrição e a imagem */
+    border: none; /* Remove qualquer borda da seção do livro */
+    max-width: 800px; /* Define a largura máxima para uniformizar com outras seções */
+    margin: 0 auto; /* Centraliza a seção horizontalmente */
+}
+
+/* Remove a borda da parte da capa e descrição */
+.book-description, .book-image {
+    border: none; /* Remove qualquer borda da descrição e imagem */
+}
+
+.book-description {
+    text-align: center; /* Centraliza o texto dentro da descrição */
+    flex: 1;
+    max-width: 300px; /* Limita a largura máxima da descrição */
+}
+
+.book-description h2 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 0 0 10px; /* Ajuste a margem inferior para reduzir o espaço */
+}
+
+.book-description p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0; /* Remove a margem para deixar o texto mais próximo */
+}
+
+.book-images {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Reduz o espaço entre as imagens */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+}
+
+.book-image,
+.book-additional-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 250px; /* Limita a largura máxima das imagens */
+}
+
+.book-image img,
+.book-additional-image img {
+    width: 100%; /* Faz com que a imagem ocupe o espaço disponível no contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-image img:hover,
+.book-additional-image img:hover {
+    transform: scale(1.05); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+/* Estilos das Imagens */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-item {
+    max-width: 250px; /* Largura máxima do contêiner da imagem */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Faz com que a imagem cubra o contêiner sem distorcer */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos da Seção de Biografia */
+#biography {
+    background-color: #fff;
+    padding: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #fdd648; /* Adiciona borda à esquerda */
+    border-right: 8px solid #fdd648; /* Adiciona borda à direita */
+    margin: 60px auto; /* Adiciona margem superior para separação e centraliza horizontalmente */
+    max-width: 1000px; /* Define a largura máxima para uniformizar com outras seções */
+}
+
+#biography h1 {
+    font-size: 3.0em; /* Tamanho do título da biografia */
+    color: #000; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+}
+
+#biography p {
+    font-size: 1.2em; /* Tamanho do texto da biografia */
+    color: #333; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+}
+
+
+/* Estilos para Responsividade */
+@media (max-width: 768px) {
+    .book-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .book-description {
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+
+    .book-images {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .book-image,
+    .book-additional-image {
+        max-width: 100%;
+    }
+
+    .images {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #home h1, #contato h1, #sobre h1 {
+        font-size: 2em; /* Ajusta o tamanho do título em dispositivos menores */
+    }
+
+    #home p, #contato p, #sobre p {
+        font-size: 1em; /* Ajusta o tamanho do texto do parágrafo em dispositivos menores */
+    }
+}
+
+/* Estilos para a Imagem no Canto Superior Direito */
+.fixed-image {
+    position: absolute; /* Fixa a imagem na tela */
+    top: 20px; /* Distância do topo */
+    left: 50px; /* Distância da direita */
+    width: 110px; /* Largura da imagem */
+    height: 110px; /* Altura da imagem */
+    border-radius: 50%; /* Faz com que a imagem seja redonda */
+    object-fit: cover; /* Faz com que a imagem cubra o contêiner sem distorcer */
+    border: 5px solid #fdd648; /* Borda ao redor da imagem */
+    z-index: 1000; /* Garante que a imagem fique acima do conteúdo */
+}
+/* Fundo com Estrelas */
+.stars-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path/to/stars.png') repeat; /* Imagem de fundo com estrelas */
+    z-index: -1; /* Coloca as estrelas atrás do conteúdo */
+}
+
+/* Imagem de Estrela */
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+/* Geração de Estrelas */
+@keyframes twinkle {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.star {
+    animation: twinkle 1.5s infinite;
+}
+
