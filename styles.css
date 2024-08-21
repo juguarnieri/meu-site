@@ -1,22 +1,36 @@
-/* Estilos Gerais */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     background-image: url('img/estrela1.webp');
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir o fundo */
-    background-position: center; /* Centraliza a imagem no fundo */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-
+/* Estilos do Cabeçalho */
 header {
     background-color: #2f2c8c;
     padding: 30px;
     color: white;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Espaça o título e a navegação */
+    align-items: center; /* Alinha verticalmente */
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+
+
+/* Estilos da Navegação */
 nav ul {
     list-style: none;
     padding: 0;
@@ -41,6 +55,18 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+
+/* Estilos da Imagem no Canto Superior Direito */
+#image-container img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #fdd648;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+/* Estilos da Seção Principal */
 main {
     padding: 20px;
     text-align: center;
@@ -67,69 +93,59 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     margin: 0 auto;
-    max-width: 1185px; /* Ajusta a largura máxima */
+    max-width: 1290px;
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
 }
 
-/* Aumentar Tamanho da Fonte para Home, Contato e Sobre */
 #home h1, #contato h1, #sobre h1 {
-    font-size: 3em; /* Aumenta o tamanho do título */
-    color: #000;
+    font-size: 4em;
+    color:#00254e;
     margin-bottom: 10px;
 }
 
 #home p, #contato p, #sobre p {
-    font-size: 1.3em; /* Aumenta o tamanho do texto do parágrafo */
+    font-size: 1.3em;
     color: #333;
     line-height: 1.4;
     margin-bottom: 20px;
 }
 
-
 /* Estilos da Seção do Livro */
 .book-section {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
     margin-bottom: 40px;
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
-    gap: 15px; /* Ajuste o espaço entre a descrição e a imagem */
-    border: none; /* Remove qualquer borda da seção do livro */
-    max-width: 800px; /* Define a largura máxima para uniformizar com outras seções */
-    margin: 0 auto; /* Centraliza a seção horizontalmente */
+    gap: 10px;
+    border: none;
+    max-width: 1200px;
 }
 
-/* Remove a borda da parte da capa e descrição */
 .book-description, .book-image {
-    border: none; /* Remove qualquer borda da descrição e imagem */
+    border: none;
 }
 
 .book-description {
-    text-align: center; /* Centraliza o texto dentro da descrição */
+    text-align: center;
     flex: 1;
-    max-width: 300px; /* Limita a largura máxima da descrição */
-}
-
-.book-description h2 {
-    font-size: 1.4em;
-    color: #333;
-    margin: 0 0 10px; /* Ajuste a margem inferior para reduzir o espaço */
+    max-width: 300px;
 }
 
 .book-description p {
     font-size: 0.9em;
     color: #666;
-    margin: 0; /* Remove a margem para deixar o texto mais próximo */
+    margin: 0;
 }
 
 .book-images {
     display: flex;
     flex-direction: row;
-    gap: 10px; /* Reduz o espaço entre as imagens */
-    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 10px;
+    justify-content: center;
 }
 
 .book-image,
@@ -137,20 +153,34 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 250px; /* Limita a largura máxima das imagens */
+    max-width: 250px;
 }
 
 .book-image img,
 .book-additional-image img {
-    width: 100%; /* Faz com que a imagem ocupe o espaço disponível no contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
 .book-image img:hover,
 .book-additional-image img:hover {
-    transform: scale(1.05); /* Aumenta o tamanho da imagem ao passar o mouse */
+    transform: scale(1.05);
+}
+
+.title h1{
+    display: flex;
+    justify-content: center;
+    color: #4447f8;
+    align-items: center;
+    flex-direction: column; /* Opcional, para empilhar o conteúdo verticalmente */
+    text-align: center;
+    margin: 20px 0;
+    text-align: center;
+    margin: 40px 0; /* Ajuste a margem conforme necessário */
+    font-size: 4rem; /* Ajuste o tamanho da fonte conforme necessário */
+
 }
 
 /* Estilos das Imagens */
@@ -162,15 +192,15 @@ section {
 }
 
 .image-item {
-    max-width: 250px; /* Largura máxima do contêiner da imagem */
+    max-width: 250px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
 .image-item img {
     width: 100%;
-    height: 200px; /* Altura fixa para todas as imagens */
-    object-fit: cover; /* Faz com que a imagem cubra o contêiner sem distorcer */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
@@ -185,24 +215,85 @@ section {
     padding: 120px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left: 8px solid #fdd648; /* Adiciona borda à esquerda */
-    border-right: 8px solid #fdd648; /* Adiciona borda à direita */
-    margin: 60px auto; /* Adiciona margem superior para separação e centraliza horizontalmente */
-    max-width: 1000px; /* Define a largura máxima para uniformizar com outras seções */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    margin: 60px auto;
+    max-width: 1100px;
 }
 
 #biography h1 {
-    font-size: 3.0em; /* Tamanho do título da biografia */
-    color: #000; /* Cor do título */
-    margin-bottom: 20px; /* Espaçamento inferior do título */
+    font-size: 3.0em;
+    color: #00254e;
+    margin-bottom: 20px;
 }
 
 #biography p {
-    font-size: 1.2em; /* Tamanho do texto da biografia */
-    color: #333; /* Cor do texto */
-    line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
 }
 
+/* Estilos dos Cartões de Personagens */
+#characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.character-card {
+    width: 300px; /* Largura do cartão */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que nada vaze fora do cartão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Faz com que o conteúdo do cartão empilhe verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center; /* Centraliza o texto dentro do cartão */
+    transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
+    font-size: 1.3rem;
+    margin-top: 4rem;
+}
+
+.character-card:hover {
+    transform: scale(1.05); /* Aumenta o cartão ao passar o mouse */
+}
+
+/* Estilo da imagem do personagem */
+.character-image {
+    width: 80%; /* Ajuste a largura da imagem conforme necessário */
+    max-width: 200px; /* Define um limite máximo para a largura da imagem */
+    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
+    margin: 15px 0; /* Espaço superior e inferior para separar a imagem do restante do conteúdo */
+    object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner sem cortar */
+    transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
+}
+
+.character-card:hover .character-image {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/* Estilo do título dentro do cartão */
+.character-card h2 {
+    margin: 0;
+    padding: 15px;
+    background-color: #f4f4f4; /* Cor de fundo cinza para a área de texto */
+    width: 100%; /* Largura completa do cartão */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo da descrição dentro do cartão */
+.character-card p {
+    padding: 15px;
+    margin: 0;
+    line-height: 1.8;
+    text-align: left; /* Alinha o texto à esquerda */
+    color: #333; /* Cor do texto */
+}
 
 /* Estilos para Responsividade */
 @media (max-width: 768px) {
@@ -233,56 +324,165 @@ section {
     }
 
     #home h1, #contato h1, #sobre h1 {
-        font-size: 2em; /* Ajusta o tamanho do título em dispositivos menores */
+        font-size: 2em;
     }
 
     #home p, #contato p, #sobre p {
-        font-size: 1em; /* Ajusta o tamanho do texto do parágrafo em dispositivos menores */
+        font-size: 1em;
     }
 }
 
 /* Estilos para a Imagem no Canto Superior Direito */
 .fixed-image {
-    position: absolute; /* Fixa a imagem na tela */
-    top: 20px; /* Distância do topo */
-    left: 50px; /* Distância da direita */
-    width: 110px; /* Largura da imagem */
-    height: 110px; /* Altura da imagem */
-    border-radius: 50%; /* Faz com que a imagem seja redonda */
-    object-fit: cover; /* Faz com que a imagem cubra o contêiner sem distorcer */
-    border: 5px solid #fdd648; /* Borda ao redor da imagem */
-    z-index: 1000; /* Garante que a imagem fique acima do conteúdo */
-}
-/* Fundo com Estrelas */
-.stars-background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('path/to/stars.png') repeat; /* Imagem de fundo com estrelas */
-    z-index: -1; /* Coloca as estrelas atrás do conteúdo */
-}
-
-/* Imagem de Estrela */
-.star {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: white;
+    top: 20px;
+    left: 50px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    opacity: 0.8;
-    z-index: -1;
+    object-fit: cover;
+    border: 5px solid #fdd648;
+    z-index: 1000;
 }
 
-/* Geração de Estrelas */
-@keyframes twinkle {
-    0% { opacity: 0.7; }
-    50% { opacity: 1; }
-    100% { opacity: 0.7; }
+/* Estilo para a seção de Histórias do Livro */
+.title {
+    text-align: center;
+    margin: 2rem 0;
 }
 
-.star {
-    animation: twinkle 1.5s infinite;
+.title h1 {
+    font-size: 4.0rem;
+    padding-bottom: 0.5rem;
+    color: #00254e;
 }
 
+#book-history {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px; /* Cantos arredondados */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1500px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+#book-history h2 {
+    font-size: 3rem;
+    color: #021224; /* Cor azul */
+    margin-bottom: 1rem;
+}
+
+#book-history p {
+    margin-bottom: 1rem;
+    line-height: 2;
+}
+
+#book-history ul,
+#book-history ol {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#book-history blockquote {
+    background-color: #f4f4f4;
+    border-left: 4px solid #00254e; /* Borda à esquerda */
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+/* Estilo para o section com ID book-history */
+#book-history {
+    text-align: center; /* Centraliza o texto e imagens dentro do section */
+    margin-top: 40px; /* Adiciona espaçamento acima do section */
+}
+
+/* Estilo para as imagens dentro do section book-history */
+#book-history img {
+    max-width: 100%; /* Garante que a imagem não exceda o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    display: block; /* Faz com que a imagem seja tratada como um bloco para centralização */
+    border: 1px solid #ddd; /* Adiciona uma borda sutil */
+    padding: 5px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Arredonda os cantos da borda */
+}
+
+/* Estilo para a div que envolve o texto e a imagem */
+#book-history .image-title {
+    text-align: center; /* Centraliza as imagens */
+    margin-bottom: 20px;
+}
+
+/* Adiciona uma borda e um padding opcional para as imagens */
+#book-history .image-title img {
+    border: 2px solid #2f2c8c; /* Borda azul ao redor da imagem */
+    padding: 5px; /* Espaço entre a imagem e a borda */
+}
+/* Estilo para o título da seção */
+.me {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.me h1{
+    color: #090655;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 8px; /* Borda arredondada */
+    font-size: 4rem;
+}
+
+/* Estilo para a seção de motivação */
+#why-site {
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para destacar o conteúdo */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para efeito de profundidade */
+    margin: 20px auto; /* Margem automática para centralizar */
+    max-width: 1500px; /* Largura máxima da seção */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+}
+
+/* Estilo para os parágrafos dentro da seção */
+#why-site p {
+    font-size: 1.5em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto */
+    color: #333333; /* Cor do texto */
+}
+.navigation-arrows {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.arrow {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #090655;
+    padding: 10px 20px;
+    border: 2px solid #090655;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: #090655;
+    color: #ffffff;
+}
+
+.arrow-left {
+    margin-right: auto;
+}
+
+.arrow-right {
+    margin-left: auto;
+}
