@@ -4,30 +4,33 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     background-image: url('img/estrela1.webp');
-    background-size: cover;
+    background-size: auto; /* Mantém o tamanho original da imagem */
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat; /* Faz a imagem se repetir */
 }
 
-/* Estilos do Cabeçalho */
 header {
-    background-color: #2f2c8c;
-    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00254e;
     color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 20px; /* Aumenta o tamanho da fonte do cabeçalho */
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between; /* Espaça o título e a navegação */
-    align-items: center; /* Alinha verticalmente */
+
+main {
+    margin-top: 150px; /* Adiciona margem superior para empurrar o conteúdo para baixo */
+    padding: 20px; /* Adiciona espaçamento ao conteúdo principal */
 }
 
-header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
+h1 {
+    margin: 0; /* Remove margens extras do título */
+    text-align: center; /* Centraliza o texto */
 }
-
 
 
 /* Estilos da Navegação */
@@ -69,7 +72,7 @@ nav ul li a:hover {
 /* Estilos da Seção Principal */
 main {
     padding: 20px;
-    text-align: center;
+    text-align: justify;
 }
 
 h1 {
@@ -93,9 +96,10 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     margin: 0 auto;
-    max-width: 1290px;
+    max-width: 1400px;
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
+    margin-top: 5rem ;
 }
 
 #home h1, #contato h1, #sobre h1 {
@@ -130,9 +134,9 @@ section {
 }
 
 .book-description {
-    text-align: center;
+    text-align: justify;
     flex: 1;
-    max-width: 300px;
+    max-width: 500px;
 }
 
 .book-description p {
@@ -218,7 +222,7 @@ section {
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     margin: 60px auto;
-    max-width: 1100px;
+    max-width: 1225px;
 }
 
 #biography h1 {
@@ -228,7 +232,7 @@ section {
 }
 
 #biography p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #333;
     line-height: 1.6;
 }
@@ -253,7 +257,7 @@ section {
     display: flex;
     flex-direction: column; /* Faz com que o conteúdo do cartão empilhe verticalmente */
     align-items: center; /* Centraliza o conteúdo horizontalmente */
-    text-align: center; /* Centraliza o texto dentro do cartão */
+    text-align:justify; /* Centraliza o texto dentro do cartão */
     transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
     font-size: 1.3rem;
     margin-top: 4rem;
@@ -291,7 +295,7 @@ section {
     padding: 15px;
     margin: 0;
     line-height: 1.8;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: justify; /* Alinha o texto à esquerda */
     color: #333; /* Cor do texto */
 }
 
@@ -366,7 +370,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1500px;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 #book-history h2 {
@@ -383,14 +387,14 @@ section {
 #book-history ul,
 #book-history ol {
     margin-left: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 #book-history blockquote {
     background-color: #f4f4f4;
     border-left: 4px solid #00254e; /* Borda à esquerda */
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 1.5rem 0;
     font-style: italic;
 }
@@ -420,7 +424,7 @@ section {
 
 /* Adiciona uma borda e um padding opcional para as imagens */
 #book-history .image-title img {
-    border: 2px solid #2f2c8c; /* Borda azul ao redor da imagem */
+    border: 2px solid #2f2c8c; 
     padding: 5px; /* Espaço entre a imagem e a borda */
 }
 /* Estilo para o título da seção */
@@ -450,14 +454,26 @@ section {
     border-right: 8px solid #fdd648;
 }
 
-/* Estilo para os parágrafos dentro da seção */
+/* Estilo para os parágrafos dentro da seção #why-site */
 #why-site p {
     font-size: 1.5em;
     line-height: 1.6;
     margin-bottom: 20px;
-    text-align: center; /* Centraliza o texto */
     color: #333333; /* Cor do texto */
+    text-align: justify; /* Justifica o texto */
 }
+
+/* Estilo para a imagem dentro da seção #why-site */
+#why-site img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px; /* Bordas arredondadas na imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para a imagem */
+}
+
+/* Estilo para setas de navegação */
 .navigation-arrows {
     display: flex;
     justify-content: space-between;
@@ -485,4 +501,230 @@ section {
 
 .arrow-right {
     margin-left: auto;
+}
+/* Estilo para a seção de aprendizagem */
+.aprren.text {
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Espaçamento externo, margem superior e inferior */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    text-align: center; /* Centraliza o texto */
+    text-align: justify; /* Justifica o alinhamento do texto */
+}
+
+/* Estilo para a seção de aprendizagem */
+.apprenticeship {
+    background-color: #ffffff; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    padding-top: 2%;
+    margin: auto; /* Espaçamento externo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    max-width: 1500px;
+    text-align: center; /* Centraliza o texto */
+    text-align: justify; /* Justifica o alinhamento do texto */
+    font-size: 1.3em;
+    margin-top: 5rem;
+}
+
+/* Estilo para o título da seção de aprendizagem */
+.apprenticeship h1 {
+    color: #00254e; /* Cor azul para o título */
+    font-size: 4rem; /* Tamanho maior da fonte do título */
+}
+
+/* Estilo para os parágrafos dentro da seção de aprendizagem */
+.apprenticeship p {
+    margin: 0 0 15px; /* Margem inferior para espaçar parágrafos */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilo para a seção de avaliação */
+.evalution {
+    background-color: #f9f9f9; /* Cor de fundo ligeiramente cinza */
+    padding: 20px; /* Espaçamento interno */
+    padding-top: 2%;
+    margin: auto; /* Espaçamento externo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    max-width: 1500px;
+    text-align: center; /* Centraliza o texto */
+    text-align: justify; /* Justifica o alinhamento do texto */
+    margin-top: 5rem;
+    font-size: 1.3em;
+}
+
+/* Estilo para o título da seção de avaliação */
+.evalution h1 {
+    color: #00254e; /* Cor azul para o título */
+    margin-top: 0; /* Remove a margem superior do título */
+    font-size: 4rem; /* Tamanho maior da fonte do título */
+}
+
+/* Estilo para os itens da lista dentro da seção de avaliação */
+.evalution ul {
+    list-style-type: disc; /* Marca itens da lista com discos */
+    padding-left: 20px; /* Espaçamento à esquerda para itens da lista */
+    margin: 0 0 15px; /* Margem inferior para espaçar lista de parágrafos */
+}
+
+/* Estilo para os itens da lista dentro da seção de avaliação */
+.evalution li {
+    margin-bottom: 10px; /* Espaçamento inferior entre itens da lista */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilo para a imagem dentro da seção de avaliação */
+.evalution img {
+    display: block; /* Remove o espaçamento abaixo da imagem */
+    margin: auto; /* Centraliza a imagem e adiciona margem superior e inferior */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura */
+    height: auto; /* Mantém a proporção da imagem */
+}
+.apprenticeship blockquote {
+    background-color: #f4f4f4;
+    border-left: 4px solid #00254e; /* Borda à esquerda */
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+.apprenticeship h2 {
+    font-size: 1.4rem;
+    color: #021224; 
+    margin-bottom: 1rem;
+}
+
+/* Estilos para as Frases Reflexivas */
+.reflection-container {
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Margem automática para centralizar */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-left: 8px solid #fdd648; /* Borda lateral esquerda */
+    border-right: 8px solid #fdd648; /* Borda lateral direita */
+    max-width: 1500px; /* Largura máxima */
+    font-size: 1.3em; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 2rem; /* Espaçamento superior */
+}
+
+.reflection-card {
+    margin-bottom: 2rem; /* Espaçamento entre cartões */
+    padding: 20px; /* Espaçamento interno dos cartões */
+    border-radius: 8px; /* Bordas arredondadas para os cartões */
+    background-color: #f9f9f9; /* Cor de fundo dos cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve dos cartões */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+.reflection-card:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do cartão em 5% */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.reflection-card h3 {
+    font-size: 1.8em; /* Tamanho da fonte da frase */
+    color: #00254e; /* Cor da frase */
+    margin-bottom: 1rem; /* Espaçamento abaixo da frase */
+}
+
+.reflection-card p {
+    font-size: 1.2em; /* Tamanho da fonte da explicação */
+    color: #333; /* Cor do texto da explicação */
+    margin-bottom: 0; /* Remove margem inferior */
+    line-height: 1.6; /* Altura da linha */
+}
+/* Estilos para as imagens dentro dos cartões */
+.reflection-card img {
+    width: 80%; /* Ajusta a largura da imagem para 100% do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    margin-top: 1rem; /* Espaçamento superior entre o texto e a imagem */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.contact-form, .author-info {
+    background-color: #fff;
+    border-radius: 8px;
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 100%;
+    flex: 1;
+}
+
+.contact-form {
+    max-width: 600px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #00254e;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #00254e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #7b9df1;
+}
+
+.author-info h3 {
+    margin: 10px 0;
+    color: #00254e;
+}
+
+.author-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.author-photo {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 5px solid #fdd648;
+    display: block;
+    margin-bottom: 20px;
+    object-fit: cover;
+
 }
