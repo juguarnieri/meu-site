@@ -178,7 +178,7 @@ section {
     justify-content: center;
     color: #4447f8;
     align-items: center;
-    flex-direction: column; /* Opcional, para empilhar o conteúdo verticalmente */
+    flex-direction: column; 
     text-align: center;
     margin: 20px 0;
     text-align: center;
@@ -269,25 +269,25 @@ section {
 
 /* Estilo da imagem do personagem */
 .character-image {
-    width: 80%; /* Ajuste a largura da imagem conforme necessário */
+    width: 80%;
     max-width: 200px; /* Define um limite máximo para a largura da imagem */
     height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
-    margin: 15px 0; /* Espaço superior e inferior para separar a imagem do restante do conteúdo */
+    margin: 15px 0; 
     object-fit: contain; /* Ajusta a imagem para caber dentro do contêiner sem cortar */
     transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
 }
 
 .character-card:hover .character-image {
-    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+    transform: scale(1.1); 
 }
 
 /* Estilo do título dentro do cartão */
 .character-card h2 {
     margin: 0;
     padding: 15px;
-    background-color: #f4f4f4; /* Cor de fundo cinza para a área de texto */
-    width: 100%; /* Largura completa do cartão */
-    text-align: center; /* Centraliza o texto */
+    background-color: #f4f4f4; 
+    width: 100%;
+    text-align: center; 
 }
 
 /* Estilo da descrição dentro do cartão */
@@ -351,7 +351,7 @@ section {
 
 /* Estilo para a seção de Histórias do Livro */
 .title {
-    text-align: center;
+    text-align: justify;
     margin: 2rem 0;
 }
 
@@ -401,7 +401,6 @@ section {
 
 /* Estilo para o section com ID book-history */
 #book-history {
-    text-align: center; /* Centraliza o texto e imagens dentro do section */
     margin-top: 40px; /* Adiciona espaçamento acima do section */
 }
 
@@ -413,7 +412,7 @@ section {
     display: block; /* Faz com que a imagem seja tratada como um bloco para centralização */
     border: 1px solid #ddd; /* Adiciona uma borda sutil */
     padding: 5px; /* Adiciona espaçamento interno */
-    border-radius: 8px; /* Arredonda os cantos da borda */
+    border-radius: 8px; 
 }
 
 /* Estilo para a div que envolve o texto e a imagem */
@@ -445,11 +444,11 @@ section {
 /* Estilo para a seção de motivação */
 #why-site {
     padding: 20px;
-    background-color: #ffffff; /* Fundo branco para destacar o conteúdo */
-    border-radius: 12px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para efeito de profundidade */
-    margin: 20px auto; /* Margem automática para centralizar */
-    max-width: 1500px; /* Largura máxima da seção */
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto; 
+    max-width: 1500px; 
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
 }
@@ -504,35 +503,35 @@ section {
 }
 /* Estilo para a seção de aprendizagem */
 .aprren.text {
-    background-color: #ffffff; /* Cor de fundo branca */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px 0; /* Espaçamento externo, margem superior e inferior */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    text-align: center; /* Centraliza o texto */
-    text-align: justify; /* Justifica o alinhamento do texto */
+    background-color: #ffffff; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    text-align: justify; 
 }
 
 /* Estilo para a seção de aprendizagem */
 .apprenticeship {
-    background-color: #ffffff; /* Cor de fundo branca */
+    background-color: #ffffff;
     padding: 20px; /* Espaçamento interno */
     padding-top: 2%;
     margin: auto; /* Espaçamento externo */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
-    text-align: center; /* Centraliza o texto */
-    text-align: justify; /* Justifica o alinhamento do texto */
+    text-align: center; 
+    text-align: justify; 
     font-size: 1.3em;
     margin-top: 5rem;
 }
 
 /* Estilo para o título da seção de aprendizagem */
 .apprenticeship h1 {
-    color: #00254e; /* Cor azul para o título */
+    color: #00254e; 
     font-size: 4rem; /* Tamanho maior da fonte do título */
 }
 
@@ -541,29 +540,35 @@ section {
     margin: 0 0 15px; /* Margem inferior para espaçar parágrafos */
     line-height: 1.6; /* Altura da linha para melhor legibilidade */
 }
+.apprenticeship img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
 /* Estilo para a seção de avaliação */
 .evalution {
-    background-color: #f9f9f9; /* Cor de fundo ligeiramente cinza */
-    padding: 20px; /* Espaçamento interno */
+    background-color: #f9f9f9; 
+    padding: 20px; 
     padding-top: 2%;
-    margin: auto; /* Espaçamento externo */
-    border-radius: 10px; /* Bordas arredondadas */
+    margin: auto; 
+    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
-    text-align: center; /* Centraliza o texto */
-    text-align: justify; /* Justifica o alinhamento do texto */
+    text-align: center; 
+    text-align: justify; 
     margin-top: 5rem;
     font-size: 1.3em;
 }
 
 /* Estilo para o título da seção de avaliação */
 .evalution h1 {
-    color: #00254e; /* Cor azul para o título */
-    margin-top: 0; /* Remove a margem superior do título */
-    font-size: 4rem; /* Tamanho maior da fonte do título */
+    color: #00254e; 
+    margin-top: 0; 
+    font-size: 4rem; 
 }
 
 /* Estilo para os itens da lista dentro da seção de avaliação */
@@ -575,8 +580,8 @@ section {
 
 /* Estilo para os itens da lista dentro da seção de avaliação */
 .evalution li {
-    margin-bottom: 10px; /* Espaçamento inferior entre itens da lista */
-    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 10px; 
+    line-height: 1.6;
 }
 
 /* Estilo para a imagem dentro da seção de avaliação */
@@ -600,56 +605,68 @@ section {
     margin-bottom: 1rem;
 }
 
+.apprenticeship img {
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block; 
+    border: 1px solid #ddd; 
+    padding: 5px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 /* Estilos para as Frases Reflexivas */
 .reflection-container {
-    background-color: #fff; /* Cor de fundo branca */
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px auto; /* Margem automática para centralizar */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    border-left: 8px solid #fdd648; /* Borda lateral esquerda */
-    border-right: 8px solid #fdd648; /* Borda lateral direita */
-    max-width: 1500px; /* Largura máxima */
-    font-size: 1.3em; /* Tamanho da fonte */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 2rem; /* Espaçamento superior */
+    background-color: #fff; 
+    padding: 20px; 
+    margin: 20px auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-left: 8px solid #fdd648; 
+    border-right: 8px solid #fdd648; 
+    max-width: 1500px; 
+    font-size: 1.3em; 
+    text-align: center; 
+    margin-top: 2rem; 
 }
 
 .reflection-card {
-    margin-bottom: 2rem; /* Espaçamento entre cartões */
-    padding: 20px; /* Espaçamento interno dos cartões */
-    border-radius: 8px; /* Bordas arredondadas para os cartões */
-    background-color: #f9f9f9; /* Cor de fundo dos cartões */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve dos cartões */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    margin-bottom: 2rem; 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .reflection-card:hover {
-    transform: scale(1.05); /* Aumenta o tamanho do cartão em 5% */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+    transform: scale(1.05); /* Aumenta o tamanho do cartão */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .reflection-card h3 {
-    font-size: 1.8em; /* Tamanho da fonte da frase */
-    color: #00254e; /* Cor da frase */
-    margin-bottom: 1rem; /* Espaçamento abaixo da frase */
+    font-size: 1.8em; 
+    color: #00254e; 
+    margin-bottom: 1rem; 
 }
 
 .reflection-card p {
-    font-size: 1.2em; /* Tamanho da fonte da explicação */
-    color: #333; /* Cor do texto da explicação */
-    margin-bottom: 0; /* Remove margem inferior */
-    line-height: 1.6; /* Altura da linha */
+    font-size: 1.2em; 
+    color: #333; 
+    margin-bottom: 0; 
+    line-height: 1.6; 
 }
+
 /* Estilos para as imagens dentro dos cartões */
 .reflection-card img {
-    width: 80%; /* Ajusta a largura da imagem para 100% do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px; /* Bordas arredondadas para as imagens */
+    width: 80%; 
+    height: auto; 
+    border-radius: 8px; 
     margin-top: 1rem; /* Espaçamento superior entre o texto e a imagem */
 }
 
-.contact-container {
+.contact {
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -727,4 +744,41 @@ section {
     margin-bottom: 20px;
     object-fit: cover;
 
+}
+
+.references {
+    background-color: #f9f9f9; /* Fundo claro */
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+    max-width: 1500px;
+}
+
+.references h1 {
+    color: #00254e; /* Azul para combinar com os outros títulos */
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.references ul {
+    list-style-type: none; /* Remove o marcador padrão */
+    padding: 0;
+}
+
+.references li {
+    margin-bottom: 10px;
+}
+
+.references a {
+    color: #000000; 
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.references a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
