@@ -1,12 +1,8 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    background-image: url('img/estrela1.webp');
-    background-size: auto; /* Mantém o tamanho original da imagem */
-    background-position: center;
-    background-repeat: repeat; /* Faz a imagem se repetir */
+    background: #f4f4f4 url('img/estrela1.webp') center repeat; /* Fundo com imagem repetida */
 }
 
 header {
@@ -22,16 +18,23 @@ header {
 }
 
 main {
-    margin-top: 150px; /* Adiciona margem superior para empurrar o conteúdo para baixo */
-    padding: 20px; /* Adiciona espaçamento ao conteúdo principal */
+    margin-top: 150px; /* Margem superior para empurrar o conteúdo */
+    padding: 20px; /* Espaçamento ao conteúdo principal */
+    text-align: justify; /* Justifica o texto */
 }
 
 h1 {
     margin: 0; /* Remove margens extras do título */
     text-align: center; /* Centraliza o texto */
+    color: #333;
+    font-size: 2em;
 }
 
-/* Estilos da Navegação */
+p {
+    font-size: 1.2em;
+    color: #2a2929;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -56,30 +59,16 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-/* Estilos da Imagem no Canto Superior Direito */
-#image-container img {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-    border: 5px solid #fdd648;
+.fixed-image {
     position: absolute;
     top: 20px;
-    right: 20px;
-}
-/* Estilos da Seção Principal (canto)*/
-main {
-    padding: 20px;
-    text-align: justify;
-}
-
-h1 {
-    color: #333;
-    font-size: 2em;
-}
-
-p {
-    font-size: 1.2em;
-    color: #2a2929;
+    left: 50px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fdd648;
+    z-index: 1000;
 }
 
 section {
@@ -92,18 +81,16 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    margin: 0 auto;
+    margin: 5rem auto 0;
     max-width: 1500px;
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
-    margin-top: 5rem ;
 }
 
 #home h1, #contato h1, #sobre h1 {
     font-size: 6em;
-    color:#00254e;
+    color: #00254e;
     margin-bottom: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #home p, #contato p, #sobre p {
@@ -111,7 +98,6 @@ section {
     color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /* Estilos da Seção do Livro */
@@ -119,17 +105,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Centraliza a seção horizontalmente */
+    margin: 0 auto;
     padding: 15px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     max-width: 1200px; /* Largura máxima */
     gap: 20px; /* Espaço entre os elementos */
-}
-
-.book-description, .book-image {
-    border: none;
 }
 
 .book-description {
@@ -143,23 +125,12 @@ section {
     margin: 0;
 }
 
-.book-images {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-}
-
-.book-image,
+.book-image img,
 .book-additional img {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 250px;
-}
-
-.book-image img,
-.book-additional-image img {
+    max-width: 5000px;
     width: 100%;
     height: auto;
     border-radius: 8px;
@@ -171,20 +142,6 @@ section {
     transform: scale(1.05);
 }
 
-.title h1{
-    display: flex;
-    justify-content: center;
-    color: #4447f8;
-    align-items: center;
-    flex-direction: column; 
-    text-align: center;
-    margin: 20px 0;
-    text-align: center;
-    margin: 40px 0; /* Ajuste a margem conforme necessário */
-    font-size: 4rem; /* Ajuste o tamanho da fonte conforme necessário */
-
-}
-
 /* Estilos das Imagens (Biografia) */
 .images {
     display: flex;
@@ -193,18 +150,14 @@ section {
     justify-content: center;
 }
 
-.image-item {
+.image-item img {
     max-width: 300px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
-}
-
-.image-item img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
 }
 
 .image-item img:hover {
@@ -271,15 +224,15 @@ section {
     background-color: #fff;
     display: flex;
     flex-direction: column; /* Faz com que o conteúdo do cartão empilhe verticalmente */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    text-align:justify; /* Centraliza o texto dentro do cartão */
+    align-items: center; 
+    text-align:justify; 
     transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
     font-size: 1.3rem;
     margin-top: 4rem;
 }
 
 .character-card:hover {
-    transform: scale(1.05); /* Aumenta o cartão ao passar o mouse */
+    transform: scale(1.05); 
 }
 
 .character-image {
@@ -308,34 +261,10 @@ section {
     margin: 0;
     line-height: 1.6;
     text-align: justify; /* Alinha o texto à esquerda */
-    color: #333; /* Cor do texto */
-}
-
-/* Estilos para a Imagem no Canto Superior Direito */
-.fixed-image {
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #fdd648;
-    z-index: 1000;
+    color: #333; 
 }
 
 /* Estilo para a seção de Histórias do Livro */
-.title {
-    text-align: justify;
-    margin: 2rem 0;
-}
-
-.title h1 {
-    font-size: 4.0rem;
-    padding-bottom: 0.5rem;
-    color: #00254e;
-}
-
 #book-history {
     background-color: #fff;
     padding: 1rem;
@@ -344,14 +273,13 @@ section {
     border-right: 8px solid #fdd648;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1500px;
-    margin: auto;
+    margin: 90px auto 0; /* Espaçamento externo */
     font-size: 1.3rem;
-    margin-top: 90px;
 }
 
 #book-history h1 {
     font-size: 4rem;
-    color: #00254e; /* Cor azul */
+    color: #00254e; 
     margin-bottom: 1rem;
 }
 
@@ -368,7 +296,7 @@ section {
 
 #book-history blockquote {
     background-color: #f4f4f4;
-    border-left: 4px solid #00254e; /* Borda à esquerda */
+    border-left: 4px solid #00254e; 
     padding: 1rem;
     font-size: 1.4rem;
     margin: 1.5rem 0;
@@ -378,29 +306,17 @@ section {
 #book-history img {
     max-width: 100%;
     height: auto; 
-    margin: 0 auto; 
     display: block; /* Faz com que a imagem seja tratada como um bloco para centralização */
     border: 1px solid #ddd; 
-    padding: 5px; /* Adiciona espaçamento interno */
+    padding: 10px; /* Adiciona espaçamento interno */
     border-radius: 8px;
-    transition: transform 0.3s ease; /* Adiciona uma transição suave para o zoom */
-    margin-bottom: 2.7rem;
-    margin-top: 2.7rem;
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o zoom */
+    margin: 3.5rem auto; /* Espaçamento externo */
 }
+
 #book-history img:hover {
     transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
 }
-
-#book-history .image-title {
-    text-align: center; /* Centraliza as imagens */
-    margin-bottom: 20px;
-}
-
-#book-history .image-title img {
-    border: 2px solid #2f2c8c; 
-    padding: 5px; /* Espaço entre a imagem e a borda */
-}
-
 
 /* Estilo para a seção de motivação */
 #why-site {
@@ -414,7 +330,6 @@ section {
     border-right: 8px solid #fdd648;
 }
 
-/* Estilo para os parágrafos dentro da seção #why-site */
 #why-site p {
     font-size: 1.5em;
     line-height: 1.6;
@@ -423,26 +338,26 @@ section {
     text-align: justify; 
 }
 
-/* Estilo para a imagem dentro da seção #why-site */
 #why-site img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 20px auto;
     border-radius: 12px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para a imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease; 
 }
 
 #why-site img:hover {
     transform: scale(1.1); 
 }
+
 .me {
     text-align: center;
     margin-top: 20px;
 }
 
-.me h1{
+.me h1 {
     color: #090655;
     margin-bottom: 20px;
     padding: 10px;
@@ -451,57 +366,56 @@ section {
     font-size: 4rem;
 }
 
-/* Estilo para a seção de aprendizagem */
+/* Estilo para a seção de reflexões pessoais */
 .apprenticeship {
     background-color: #ffffff;
-    padding: 20px; /* Espaçamento interno */
-    padding-top: 2%;
-    margin: auto; /* Espaçamento externo */
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px 20px 2% 20px; /* Espaçamento interno */
+    margin: 5rem auto 0 auto; /* Espaçamento externo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
-    text-align: center; 
-    text-align: justify; 
+    text-align: justify; /* Justifica o texto */
     font-size: 1.3em;
-    margin-top: 5rem;
 }
 
-/* Estilo para o título da seção de aprendizagem */
 .apprenticeship h1 {
-    color: #00254e; 
+    color: #00254e;
     font-size: 4rem; /* Tamanho maior da fonte do título */
 }
+
 .apprenticeship h2 {
     font-size: 1.4rem;
-    color: #021224; 
+    color: #021224;
     margin-bottom: 1rem;
 }
 
-/* Estilo para os parágrafos dentro da seção de aprendizagem */
 .apprenticeship p {
-    margin: 0 0 15px; /* Margem inferior para espaçar parágrafos */
+    margin-bottom: 15px; /* Margem inferior para espaçar parágrafos */
     line-height: 1.6; /* Altura da linha para melhor legibilidade */
 }
+
 .apprenticeship img {
-    max-width: 100%; 
-    height: auto; 
-    margin: 0 auto; 
-    display: block; 
-    border: 1px solid #ddd; 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 3.5rem auto; /* Margens superior e inferior */
+    border: 1px solid #ddd;
     padding: 5px;
     border-radius: 8px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease-in-out; 
+    padding: 10px; /* Adiciona espaçamento interno */
+    border-radius: 8px;
 }
+
 .apprenticeship img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
+
 .apprenticeship blockquote {
     background-color: #f4f4f4;
-    border-left: 4px solid #00254e; /* Borda à esquerda */
+    border-left: 4px solid #00254e;
     padding: 1rem;
     font-size: 1.3rem;
     margin: 1.5rem 0;
@@ -510,70 +424,65 @@ section {
 
 /* Estilo para a seção de avaliação */
 .evalution {
-    background-color: #f9f9f9; 
-    padding: 20px; 
-    padding-top: 2%;
-    margin: auto; 
-    border-radius: 10px; 
+    background-color: #f9f9f9;
+    padding: 20px 20px 2% 20px; /* Espaçamento interno */
+    margin: 5rem auto 0 auto; /* Espaçamento externo */
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
-    text-align: center; 
-    text-align: justify; 
-    margin-top: 5rem;
+    text-align: justify; /* Justifica o texto */
     font-size: 1.3em;
 }
 
 .evalution h1 {
-    color: #00254e; 
-    margin-top: 0; 
-    font-size: 4rem; 
+    color: #00254e;
+    font-size: 4rem; /* Tamanho maior da fonte do título */
 }
 
 .evalution ul {
     list-style-type: disc; /* Marca itens da lista com discos */
-    padding-left: 20px; 
-    margin: 0 0 15px; 
+    padding-left: 20px;
+    margin: 0 0 15px;
 }
 
 .evalution li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     line-height: 1.6;
 }
 
 .evalution img {
     display: block; /* Remove o espaçamento abaixo da imagem */
-    margin: auto; 
+    margin: auto;
     max-width: 100%;
-    height: auto; 
-    transition: transform 0.3s ease; 
-}
-.evalution img:hover {
-    transform: scale(1.1); 
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
+.evalution img:hover {
+    transform: scale(1.1);
+}
 
 /* Estilos para as Frases Reflexivas */
 .reflection {
-    background-color: #fff; 
+    background: #fff; 
     padding: 20px; 
-    margin: 20px auto; 
+    margin: 3rem auto; 
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-left: 8px solid #fdd648; 
     border-right: 8px solid #fdd648; 
     max-width: 1500px; 
-    font-size: 1.3em; 
+    font-size: 1.3rem; 
     text-align: center; 
-    margin-top: 2rem; 
 }
 
 .reflection-card {
     margin-bottom: 2rem; 
     padding: 20px; 
     border-radius: 8px; 
-    background-color: #f9f9f9; 
+    background: #f9f9f9; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -583,9 +492,12 @@ section {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
+.title h1, .reflection-card h3 {
+    color: #00254e;
+}
+
 .reflection-card h3 {
-    font-size: 1.8em; 
-    color: #00254e; 
+    font-size: 2.5rem; 
     margin-bottom: 1rem; 
 }
 
@@ -610,10 +522,11 @@ section {
     gap: 20px;
     margin: 20px auto;
     max-width: 1200px;
+    font-size: 1.3rem;
 }
 
 .contact-form, .author-info {
-    background-color: #fff;
+    background: #fff;
     border-radius: 8px;
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
@@ -627,7 +540,7 @@ section {
     max-width: 600px;
 }
 
-.contact-form h2 {
+.contact-form h2, .author-info h3 {
     margin-bottom: 20px;
     color: #00254e;
 }
@@ -650,28 +563,24 @@ section {
     box-sizing: border-box;
 }
 
-.contact-form input[type="submit"] {
-    background-color: #00254e;
+.botao-enviar, .contact-form input[type="submit"] {
+    font-weight: bold;
+    background: #00254e;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.5rem;
 }
 
 .contact-form input[type="submit"]:hover {
     background-color: #7b9df1;
 }
 
-.author-info h3 {
-    margin: 10px 0;
-    color: #00254e;
-}
-
 .author-info p {
     margin: 5px 0;
-    font-size: 16px;
+    font-size: 1.2rem;
 }
 
 .author-photo {
@@ -682,13 +591,12 @@ section {
     display: block;
     margin-bottom: 20px;
     object-fit: cover;
-    margin:auto
+    margin: auto;
 }
 
-
-/* Estilo Refências Bibliográficas */
+/* Estilo Referências Bibliográficas */
 .references {
-    background-color: #f9f9f9; /* Fundo claro */
+    background: #f9f9f9;
     padding: 20px;
     margin: auto;
     border-radius: 10px;
@@ -699,15 +607,10 @@ section {
 }
 
 .references h1 {
-    color: #00254e; /* Azul para combinar com os outros títulos */
+    color: #00254e;
     font-size: 3rem;
     text-align: center;
     margin-bottom: 15px;
-}
-
-.references ul {
-    list-style-type: none; /* Remove o marcador padrão */
-    padding: 0;
 }
 
 .references li {
@@ -715,13 +618,13 @@ section {
 }
 
 .references a {
-    color: #000000; 
+    color: #000;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 .references a:hover {
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    text-decoration: underline;
 }
 
 /* Estilo para setas de navegação */
@@ -733,26 +636,18 @@ section {
 
 .arrow {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #090655;
-    padding: 10px 30px; /* Aumenta o padding para mais espaço */
+    padding: 10px 30px; 
     border: 2px solid #090655;
     border-radius: 50px; 
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .arrow:hover {
     background-color: #090655;
-    color: #ffffff;
-    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
-}
-
-.arrow-left {
-    margin-right: auto;
-}
-
-.arrow-right {
-    margin-left: auto;
+    color: #fff;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
