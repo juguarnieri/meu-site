@@ -14,24 +14,24 @@ header {
     color: white;
     padding: 20px;
     box-sizing: border-box;
-    font-size: 20px; /* Aumenta o tamanho da fonte do cabeçalho */
+    font-size: 20px; 
 }
 
 main {
     margin-top: 150px; /* Margem superior para empurrar o conteúdo */
     padding: 20px; /* Espaçamento ao conteúdo principal */
-    text-align: justify; /* Justifica o texto */
+    text-align: justify; 
 }
 
 h1 {
-    margin: 0; /* Remove margens extras do título */
-    text-align: center; /* Centraliza o texto */
+    margin: 0;
+    text-align: center; 
     color: #333;
     font-size: 2em;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #2a2929;
 }
 
@@ -51,6 +51,7 @@ nav ul li a {
     color: white;
     padding: 10px 15px;
     transition: background-color 0.3s;
+    font-size: 1.8rem;
 }
 
 nav ul li a.active,
@@ -63,8 +64,8 @@ nav ul li a:hover {
     position: absolute;
     top: 20px;
     left: 50px;
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #fdd648;
@@ -88,7 +89,7 @@ section {
 }
 
 #home h1, #contato h1, #sobre h1 {
-    font-size: 6em;
+    font-size: 7em;
     color: #00254e;
     margin-bottom: 10px;
 }
@@ -110,9 +111,15 @@ section {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    max-width: 1200px; /* Largura máxima */
+    max-width: 1500px; /* Largura máxima */
     gap: 20px; /* Espaço entre os elementos */
 }
+.vertical-divider {
+        width: 0.5rem; 
+        background-color: #00254e; 
+        height: 500px; 
+        align-self: stretch; 
+    }
 
 .book-description {
     text-align: justify;
@@ -123,6 +130,7 @@ section {
 .book-description p {
     font-size: 0.9em;
     margin: 0;
+    font-weight: bold;
 }
 
 .book-image img,
@@ -177,7 +185,7 @@ section {
 }
 
 #biography h1 {
-    font-size: 4.0em;
+    font-size: 5rem;
     color: #00254e;
     margin-bottom: 20px;
 }
@@ -194,41 +202,61 @@ section {
     padding: 20px; 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    max-width: 1200px; 
+    max-width: 1500px; 
     margin: auto; 
     text-align: center; 
     margin-top: 4rem;
+    margin-bottom: 3rem;
+    border-left: 8px solid #fdd648;
+    border-right: 8px solid #fdd648;
+}
+
+.character-quote {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 5px solid #0a3f77;
+    background-color: #84a7c5af;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-weight: bold;
+    
 }
 
 .characters-title h1 {
     color: #00254e; 
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 0; 
 }
 
 #characters {
     display: flex;
-    flex-wrap: wrap;/* Permite que os itens flexíveis quebrem para uma nova linha se não houver espaço suficiente em uma única linha. */
-    justify-content: center; /* Alinha os itens flexíveis ao longo do eixo principal (horizontal) no centro. */
-    gap: 20px; /* Define um espaçamento de 20px entre os itens flexíveis, tanto na horizontal quanto na vertical. */
+    flex-direction: column; /* Organiza os cartões em uma coluna, um embaixo do outro */
+    align-items: center; /* Centraliza os cartões horizontalmente */
+    gap: 20px; /* Espaçamento entre os cartões */
     padding: 20px; 
 }
 
 .character-card {
-    width: 300px; /* Largura do cartão */
+    width: 100%; 
+    max-width: 1550px; 
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     border-radius: 8px;
-    overflow: hidden; /* Garante que nada vaze fora do cartão */
+    overflow: hidden; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     display: flex;
-    flex-direction: column; /* Faz com que o conteúdo do cartão empilhe verticalmente */
+    flex-direction: column; 
     align-items: center; 
-    text-align:justify; 
-    transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
+    transition: transform 0.3s ease-in-out; 
     font-size: 1.3rem;
-    margin-top: 4rem;
+    padding: 15px; 
+    box-sizing: border-box; 
+    margin-bottom: 3rem;
 }
 
 .character-card:hover {
@@ -236,32 +264,45 @@ section {
 }
 
 .character-image {
-    width: 80%;
-    max-width: 200px; /* Define um limite máximo para a largura da imagem */
-    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção */
-    margin: 15px 0; 
-    object-fit: contain; /* Ajusta a imagem para caber dentro sem cortar */
-    transition: transform 0.3s ease-in-out; /* Suaviza o efeito de aumento ao passar o mouse */
+    width: 80%; 
+    max-width: 400px; 
+    height: auto; 
+    margin-top: 30px;
+    margin-bottom: 15px; 
+    object-fit: contain; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 .character-card:hover .character-image {
     transform: scale(1.1); 
 }
 
+.character-content {
+    width: 100%;
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    flex-grow: 1; /* O conteúdo cresce para ocupar o espaço restante */
+}
+
 .character-card h2 {
     margin: 0;
-    padding: 15px;
+    font-size: 2.5rem;
+    padding: 25px;
     background-color: #f4f4f4; 
     width: 100%;
     text-align: center; 
+    color: #00254e;
 }
 
 .character-card p {
-    padding: 15px;
-    margin: 0;
+    margin: 0; 
+    padding: 10px 0; 
     line-height: 1.6;
-    text-align: justify; /* Alinha o texto à esquerda */
+    text-align: justify; 
     color: #333; 
+    width: 100%;
 }
 
 /* Estilo para a seção de Histórias do Livro */
@@ -278,7 +319,7 @@ section {
 }
 
 #book-history h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: #00254e; 
     margin-bottom: 1rem;
 }
@@ -362,8 +403,8 @@ section {
     margin-bottom: 20px;
     padding: 10px;
     display: inline-block;
-    border-radius: 8px; /* Borda arredondada */
-    font-size: 4rem;
+    border-radius: 8px; 
+    font-size: 5rem;
 }
 
 /* Estilo para a seção de reflexões pessoais */
@@ -376,13 +417,13 @@ section {
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
-    text-align: justify; /* Justifica o texto */
+    text-align: justify; 
     font-size: 1.3em;
 }
 
 .apprenticeship h1 {
     color: #00254e;
-    font-size: 4rem; /* Tamanho maior da fonte do título */
+    font-size: 5rem; 
 }
 
 .apprenticeship h2 {
@@ -400,12 +441,12 @@ section {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 3.5rem auto; /* Margens superior e inferior */
+    margin: 3.5rem auto; 
     border: 1px solid #ddd;
     padding: 5px;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out; 
-    padding: 10px; /* Adiciona espaçamento interno */
+    padding: 10px; 
     border-radius: 8px;
 }
 
@@ -432,13 +473,14 @@ section {
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
-    text-align: justify; /* Justifica o texto */
+    text-align: justify; 
     font-size: 1.3em;
+    line-height: 1.6;
 }
 
 .evalution h1 {
     color: #00254e;
-    font-size: 4rem; /* Tamanho maior da fonte do título */
+    font-size: 5rem; /* Tamanho maior da fonte do título */
 }
 
 .evalution ul {
@@ -494,7 +536,7 @@ section {
 
 .title h1, .reflection-card h3 {
     color: #00254e;
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .reflection-card h3 {
