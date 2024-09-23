@@ -2,7 +2,7 @@ body {
     font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4 url('img/estrela1.webp') center repeat; /* Fundo com imagem repetida */
+    background: #f4f4f4 url('img/estrelaslaranja.webp') center repeat; 
 }
 
 header {
@@ -10,7 +10,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #00254e;
+    background-color: #f07f2f;
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -18,8 +18,8 @@ header {
 }
 
 main {
-    margin-top: 150px; /* Margem superior para empurrar o conteúdo */
-    padding: 20px; /* Espaçamento ao conteúdo principal */
+    margin-top: 150px; 
+    padding: 20px; 
     text-align: justify; 
 }
 
@@ -39,7 +39,8 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: right;
+    justify-content: right; /* Mantém a justificação à direita */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas menores */
 }
 
 nav ul li {
@@ -56,10 +57,64 @@ nav ul li a {
 
 nav ul li a.active,
 nav ul li a:hover {
-    background-color: #7b9df1;
+    background-color: #f7b684;
     border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 10px; /* Reduzindo o padding do cabeçalho em telas menores */
+        font-size: 18px; /* Ajustando o tamanho da fonte */
+    }
+
+    nav ul {
+        justify-content: center; /* Centralizando o menu em telas pequenas */
+        flex-direction: column; /* Muda a direção do menu para coluna */
+        align-items: center; /* Alinha os itens ao centro */
+    }
+
+    nav ul li {
+        margin: 5px 10px; /* Ajustando o espaçamento entre os itens */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduzindo o tamanho do título */
+    }
+
+    p {
+        font-size: 1.1em; /* Ajustando o tamanho do texto */
+    }
+
+    .book-section {
+        flex-direction: column; /* Muda a direção da seção de livros para coluna */
+    }
+
+    .quote-container {
+        text-align: center; /* Centraliza o texto das citações */
+        margin-bottom: 20px; /* Espaçamento inferior */
+    }
+
+    .biography img {
+        width: 90%; /* Ajusta a largura da imagem da biografia */
+    }
+
+    .obra-card {
+        flex-direction: column; /* Muda a direção dos cards de obras para coluna */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f07f2f;
+    color: white;
+    margin-top: 20px;
+}
+
+footer p{
+    color: #f0f0f0;
+    font-size: 2rem;
+}
 .fixed-image {
     position: absolute;
     top: 20px;
@@ -76,7 +131,6 @@ section {
     margin-bottom: 40px;
 }
 
-/* Estilos da Seção Home, Contato e Sobre */
 #home, #contato, #sobre {
     background-color: #fff;
     border-radius: 8px;
@@ -90,7 +144,7 @@ section {
 
 #home h1, #contato h1, #sobre h1 {
     font-size: 7em;
-    color: #00254e;
+    color: #f7b684;
     margin-bottom: 10px;
 }
 
@@ -101,7 +155,6 @@ section {
     margin-bottom: 20px;
 }
 
-/* Estilos da Seção do Livro */
 .book-section {
     display: flex;
     align-items: center;
@@ -111,35 +164,40 @@ section {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    max-width: 1500px; /* Largura máxima */
-    gap: 20px; /* Espaço entre os elementos */
+    max-width: 1500px; 
+    gap: 20px; 
 }
+
 .vertical-divider {
         width: 0.5rem; 
-        background-color: #00254e; 
+        background-color: #f07f2f; 
         height: 500px; 
         align-self: stretch; 
     }
 
-.book-description {
+.quote-container {
     text-align: justify;
     flex: 1;
     max-width: 500px;
 }
 
-.book-description p {
+.quote {
     font-size: 0.9em;
     margin: 0;
     font-weight: bold;
 }
 
-.book-image img,
-.book-additional img {
+.author {
+    font-size: 0.8em; 
+    margin-top: 10px; 
+    font-style: italic; 
+}
+
+.book-image img {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 5000px;
-    width: 100%;
+    max-width: 430px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
@@ -150,54 +208,63 @@ section {
     transform: scale(1.05);
 }
 
-/* Estilos das Imagens (Biografia) */
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.image-item img {
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.image-item img:hover {
-    transform: scale(1.05);
-}
-
-/* Estilos da Seção de Biografia */
-#biography {
-    background-color: #fff;
-    padding: 120px;
-    border-radius: 8px;
+.biography{
+    background-color: #ffffff;
+    padding: 20px 20px 2% 20px; 
+    margin: 5rem auto 0 auto; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
-    margin: 60px auto;
-    max-width: 1320px;
+    max-width: 1500px;
+    text-align: justify; 
+    font-size: 1.3em;
 }
 
-#biography h1 {
-    font-size: 5rem;
-    color: #00254e;
-    margin-bottom: 20px;
+.biography h1 {
+    color: #f7b684;
+    font-size: 5rem; 
 }
 
-#biography p {
+.biography h2 {
     font-size: 1.4rem;
-    color: #333;
-    line-height: 1.6;
+    color: #021224;
+    margin-bottom: 1rem;
 }
 
-/* Estilos dos Cartões de Personagens */
-.characters-title {
+.biography p {
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+}
+
+.biography img {
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+    display: block;
+    margin: 3.5rem auto; 
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; 
+    padding: 10px; 
+    border-radius: 8px;
+}
+
+.biography img:hover {
+    transform: scale(1.1);
+}
+
+.biography blockquote {
+    background-color: #f4f4f4;
+    border-left: 4px solid #00254e;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+}
+
+.obras-title {
     background-color: #fff; 
     padding: 20px; 
     border-radius: 8px; 
@@ -206,41 +273,26 @@ section {
     margin: auto; 
     text-align: center; 
     margin-top: 4rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
 }
 
-.character-quote {
-    font-size: 1.3em;
-    font-style: italic;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-left: 5px solid #0a3f77;
-    background-color: #84a7c5af;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    font-weight: bold;
-    
-}
-
-.characters-title h1 {
-    color: #00254e; 
+.obras-title h1 {
+    color: #f7b684; 
     font-size: 5rem;
     margin: 0; 
 }
 
-#characters {
+#obras {
     display: flex;
-    flex-direction: column; /* Organiza os cartões em uma coluna, um embaixo do outro */
-    align-items: center; /* Centraliza os cartões horizontalmente */
-    gap: 20px; /* Espaçamento entre os cartões */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
     padding: 20px; 
 }
 
-.character-card {
+.obra-card {
     width: 100%; 
     max-width: 1550px; 
     border-left: 8px solid #fdd648;
@@ -259,11 +311,11 @@ section {
     margin-bottom: 3rem;
 }
 
-.character-card:hover {
+.obra-card:hover {
     transform: scale(1.05); 
 }
 
-.character-image {
+.obra-image {
     width: 80%; 
     max-width: 400px; 
     height: auto; 
@@ -273,30 +325,52 @@ section {
     transition: transform 0.3s ease-in-out; 
 }
 
-.character-card:hover .character-image {
+.obra-card:hover .character-image {
     transform: scale(1.1); 
 }
 
-.character-content {
+.obra-content {
     width: 100%;
     text-align: left; 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha o conteúdo ao topo */
-    flex-grow: 1; /* O conteúdo cresce para ocupar o espaço restante */
+    justify-content: flex-start; 
+    flex-grow: 1; 
+    align-items: flex-start; 
 }
 
-.character-card h2 {
+.obra-text {
+    flex-grow: 1; 
+    margin-bottom: 1rem;
+    text-align: center; 
+}
+
+.informacoes {
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    margin: 0; 
+}
+
+.obra-card h2 {
     margin: 0;
     font-size: 2.5rem;
     padding: 25px;
-    background-color: #f4f4f4; 
+    background-color: #fdd6486a; 
     width: 100%;
     text-align: center; 
-    color: #00254e;
+    color: #f77a20;
 }
 
-.character-card p {
+.sinopse-title{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: #ffa260;
+}
+
+.obra-card p {
     margin: 0; 
     padding: 10px 0; 
     line-height: 1.6;
@@ -305,141 +379,56 @@ section {
     width: 100%;
 }
 
-/* Estilo para a seção de Histórias do Livro */
-#book-history {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px; /* Cantos arredondados */
-    border-left: 8px solid #fdd648;
-    border-right: 8px solid #fdd648;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1500px;
-    margin: 90px auto 0; /* Espaçamento externo */
-    font-size: 1.3rem;
-}
-
-#book-history h1 {
-    font-size: 5rem;
-    color: #00254e; 
-    margin-bottom: 1rem;
-}
-
-#book-history p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-#book-history ul,
-#book-history ol {
-    margin-left: 1.5rem;
-    font-size: 1.3rem;
-}
-
-#book-history blockquote {
-    background-color: #f4f4f4;
-    border-left: 4px solid #00254e; 
-    padding: 1rem;
-    font-size: 1.4rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-}
-
-#book-history img {
+#obras img {
     max-width: 100%;
+    width: 500px;
     height: auto; 
-    display: block; /* Faz com que a imagem seja tratada como um bloco para centralização */
+    display: block; 
     border: 1px solid #ddd; 
-    padding: 10px; /* Adiciona espaçamento interno */
+    padding: 10px;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave para o zoom */
-    margin: 3.5rem auto; /* Espaçamento externo */
+    transition: transform 0.3s ease-in-out;
+    margin: 3.5rem auto; 
 }
 
-#book-history img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
-}
-
-/* Estilo para a seção de motivação */
-#why-site {
-    padding: 20px;
-    background-color: #ffffff; 
-    border-radius: 12px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    margin: 20px auto; 
-    max-width: 1500px; 
-    border-left: 8px solid #fdd648;
-    border-right: 8px solid #fdd648;
-}
-
-#why-site p {
-    font-size: 1.5em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #333; 
-    text-align: justify; 
-}
-
-#why-site img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-    border-radius: 12px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.3s ease; 
-}
-
-#why-site img:hover {
+#obras img:hover {
     transform: scale(1.1); 
 }
 
-.me {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.me h1 {
-    color: #090655;
-    margin-bottom: 20px;
-    padding: 10px;
-    display: inline-block;
-    border-radius: 8px; 
-    font-size: 5rem;
-}
-
-/* Estilo para a seção de reflexões pessoais */
-.apprenticeship {
-    background-color: #ffffff;
-    padding: 20px 20px 2% 20px; /* Espaçamento interno */
-    margin: 5rem auto 0 auto; /* Espaçamento externo */
+.importance {
+    background-color: #f9f9f9;
+    padding: 20px 20px 2% 20px; 
+    margin: 5rem auto 0 auto; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
     max-width: 1500px;
     text-align: justify; 
     font-size: 1.3em;
+    line-height: 1.6;
 }
 
-.apprenticeship h1 {
-    color: #00254e;
+.importance h1 {
+    color: #f7b684;
     font-size: 5rem; 
 }
 
-.apprenticeship h2 {
-    font-size: 1.4rem;
-    color: #021224;
-    margin-bottom: 1rem;
+.importance ul {
+    list-style-type: disc; 
+    padding-left: 20px;
+    margin: 0 0 15px;
 }
 
-.apprenticeship p {
-    margin-bottom: 15px; /* Margem inferior para espaçar parágrafos */
-    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+.importance li {
+    margin-bottom: 10px;
+    line-height: 1.6;
 }
 
-.apprenticeship img {
+.importance img {
     max-width: 100%;
     height: auto;
+    width: 850px;
     display: block;
     margin: 3.5rem auto; 
     border: 1px solid #ddd;
@@ -450,63 +439,10 @@ section {
     border-radius: 8px;
 }
 
-.apprenticeship img:hover {
+.importance img:hover {
     transform: scale(1.1);
 }
 
-.apprenticeship blockquote {
-    background-color: #f4f4f4;
-    border-left: 4px solid #00254e;
-    padding: 1rem;
-    font-size: 1.3rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-}
-
-/* Estilo para a seção de avaliação */
-.evalution {
-    background-color: #f9f9f9;
-    padding: 20px 20px 2% 20px; /* Espaçamento interno */
-    margin: 5rem auto 0 auto; /* Espaçamento externo */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    border-left: 8px solid #fdd648;
-    border-right: 8px solid #fdd648;
-    max-width: 1500px;
-    text-align: justify; 
-    font-size: 1.3em;
-    line-height: 1.6;
-}
-
-.evalution h1 {
-    color: #00254e;
-    font-size: 5rem; /* Tamanho maior da fonte do título */
-}
-
-.evalution ul {
-    list-style-type: disc; /* Marca itens da lista com discos */
-    padding-left: 20px;
-    margin: 0 0 15px;
-}
-
-.evalution li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.evalution img {
-    display: block; /* Remove o espaçamento abaixo da imagem */
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.evalution img:hover {
-    transform: scale(1.1);
-}
-
-/* Estilos para as Frases Reflexivas */
 .reflection {
     background: #fff; 
     padding: 20px; 
@@ -530,18 +466,19 @@ section {
 }
 
 .reflection-card:hover {
-    transform: scale(1.02); /* Aumenta o tamanho do cartão */
+    transform: scale(1.02); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
-.title h1, .reflection-card h3 {
-    color: #00254e;
+.title h1 {
+    color:#f7b684;
     font-size: 5rem;
-}
+} 
 
 .reflection-card h3 {
     font-size: 2.5rem; 
     margin-bottom: 1rem; 
+    color: #000000;
 }
 
 .reflection-card p {
@@ -558,67 +495,71 @@ section {
     margin-top: 1rem;
 }
 
-/* Estilo para Contato e Autor */
-.contact {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    font-size: 1.3rem;
+.poems {
+    background: #fff; 
+    padding: 20px; 
+    margin: 3rem auto; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-left: 8px solid #fdd648; 
+    border-right: 8px solid #fdd648; 
+    max-width: 1500px; 
+    font-size: 1.3rem;  
+    margin-bottom: 2rem;
 }
 
-.contact-form, .author-info {
-    background: #fff;
-    border-radius: 8px;
+.poems-eli {
+    margin: 4rem 0; 
+    padding: 20px; 
+    border-radius: 8px; 
+    background: #f9f9f9; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.poems-eli:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.poems-eli h3 {
+    font-size: 3rem; 
+    margin-bottom: 1rem; 
+    color: #f07f2f;
+}
+
+.poems-eli pre {
+    font-size: 1.2em; 
+    color: #333; 
+    margin-bottom: 1rem; 
+    line-height: 1.6; 
+    text-align: left;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+.poems-eli img {
+    display: block; 
+    margin: 2rem auto 0; 
+    width: 80%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+.author-info {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-left: 8px solid #fdd648;
     border-right: 8px solid #fdd648;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 100%;
-    flex: 1;
+    max-width: 1500px;
+    margin-top: 3rem;
 }
 
-.contact-form {
-    max-width: 600px;
-}
-
-.contact-form h2, .author-info h3 {
+.author-info h3 {
     margin-bottom: 20px;
     color: #00254e;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-}
-
-.botao-enviar, .contact-form input[type="submit"] {
-    font-weight: bold;
-    background: #00254e;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #7b9df1;
 }
 
 .author-info p {
@@ -627,8 +568,8 @@ section {
 }
 
 .author-photo {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     border: 5px solid #fdd648;
     display: block;
@@ -637,7 +578,6 @@ section {
     margin: auto;
 }
 
-/* Estilo Referências Bibliográficas */
 .references {
     background: #f9f9f9;
     padding: 20px;
@@ -650,27 +590,23 @@ section {
 }
 
 .references h1 {
-    color: #00254e;
-    font-size: 3rem;
+    color: #f7b684;
+    font-size: 5rem;
     text-align: center;
     margin-bottom: 15px;
 }
 
-.references li {
-    margin-bottom: 10px;
+.reference {
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
-
-.references a {
-    color: #000;
+.reference a {
+    color: #001aff;
     text-decoration: none;
-    font-size: 1.4rem;
 }
-
-.references a:hover {
+.reference a:hover {
     text-decoration: underline;
 }
-
-/* Estilo para setas de navegação */
 .navigation-arrows {
     display: flex;
     justify-content: space-between;
@@ -680,17 +616,20 @@ section {
 .arrow {
     text-decoration: none;
     font-size: 2rem;
-    color: #090655;
+    color: #f77a20;
     padding: 10px 30px; 
-    border: 2px solid #090655;
+    border: 2px solid #f77a20;
     border-radius: 50px; 
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
+
 .arrow:hover {
-    background-color: #090655;
+    background-color: #f77a20;
     color: #fff;
     transform: scale(1.05); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+
